@@ -1,0 +1,414 @@
+$icon-font-path: "/bower_components/sass-bootstrap/fonts/"
+
+// @import sass-bootstrap/lib/bootstrap
+/* 
+ * Partials 
+ */
+@import _brand.sass
+@import _buttons.sass
+@import _header.sass
+@import _sidebar.sass
+@import _modules.sass
+@import _footer.sass
+
+html, body
+	overflow-x: hidden
+
+body#body
+	background-color: #ecebe9
+	color: #444
+	font-family: 'Open Sans', sans-serif
+
+.container#main-container
+	background: #FFF
+a.disabled
+	color: $brand-lightGray
+	cursor: not-allowed
+	&:hover, &:focus, &:active
+		color: $brand-lightGray
+		text-decoration: none
+.btn
+	border-radius: 0
+.seperate
+	height: 30px
+	width: 100%
+// Home Page
+#home-feat
+	background-image: url('../images/home-banner.png')
+	color: #FFF
+	.btn.btn-feat
+		border: 2px solid #FFF
+		border-radius: 0
+		clear: both
+		color: #FFF
+		float: left
+		margin: 30px 5px 0
+		text-transform: uppercase
+		&:hover, &:active, &:focus
+			color: #FFF
+			border-color: $brand-lightBlue
+	h3
+		background: rgba($brand-lightBlue, 0.9)
+		display: inline-block
+		clear: both
+		float: left
+		font-size: 24px
+		margin: 5px
+		padding: 15px
+.border
+	border: 3px solid $brand-lightBlue
+	margin-bottom: 10px
+.icons
+	margin: 30px 0
+	.col-sm-4, .col-sm-5
+		display: table
+		font-size: 18px
+	p
+		display: table-cell
+		position: relative
+		vertical-align: middle
+		width: 100%
+	.col-sm-4
+		padding: 10px 0
+		.center
+			width: 80%
+	.col-sm-5
+		padding: 10px 0
+		.center
+			width: 90%
+	.center
+		display: inherit
+		margin: 0 auto
+		width: 80%
+	i.icon
+		background-image: url('../images/icons.png')
+		display: inline-block
+		float: left
+		height: 80px
+		width: 110px
+		&.one
+			background-position: -35px -30px
+		&.two
+			background-position: -35px -150px
+		&.three
+			background-position: -35px -280px
+		&.four
+			background-position: -35px -400px
+		&.five
+			background-position: -35px -520px
+
+#caseStudies
+	a
+		color: $brand-gray
+#caseStudies .col-sm-3 .square
+	border: 1px solid $brand-lightBlue
+	border-radius: 2px
+	// margin: 10px
+	padding: 10px
+	.img-responsive
+		margin-left: auto
+		margin-right: auto
+
+#stripe-header
+	position: relative
+	&:before, &:after
+		background: #dfdfdf
+		content: ""
+		height: 100%
+		position: absolute
+		top: 0
+		width: 800px
+	&:before
+		left: -800px
+	&:after
+		right: -800px
+// Page Content
+#contentWrapper
+	background: #FFF
+#content
+	background: #FFF
+	padding: 30px 15px 80px
+	div.lead
+		border-bottom: 1px solid #EEE
+		margin-bottom: 20px
+		padding-bottom: 30px
+		h1, p, p.lead
+			font-size: 22px
+		h1
+			font-weight: 600
+			margin-top: 0
+		p
+			font-weight: 200
+	section
+		border-bottom: 1px solid #EEE
+		margin-bottom: 20px
+		padding-bottom: 10px
+		h4
+			font-size: 18px
+			font-weight: 600
+		&.border-top
+			border-top: 1px solid #EEE
+			margin-top: 10px
+			padding-top: 10px
+	ul, li
+		list-style-type: none
+	ul
+		padding: 0 11px
+		li
+			margin: 10px 0
+			&:before
+				content: "-"
+				left: -10px
+				position: relative
+	dl.grid
+		background: #EEE
+		padding: 15px
+		.definition
+			border-top: 5px solid #FFF
+			clear: both
+			display: block
+			padding: 20px 10px
+			&:first-child
+				border: none
+		dt, dd
+			float: left
+			padding: 5px 15px
+		dt
+			color: #555
+			vertical-align: middle
+			width: 40%
+		dd
+			border-left: 5px solid #FFF
+			width: 60%
+	dl.list
+		.definition
+			padding: 20px
+			&:nth-child(odd)
+				background: #EEE
+	h1.founderName
+		border-bottom: 1px solid #EEE
+		font-size: 24px
+		margin-top: 0
+		padding-bottom: 10px
+		&.italic
+			font-style: italic
+			font-weight: 700
+	a.btn.buy-now
+		border: 3px solid $brand-lightBlue
+		border-radius: 0
+		color: $brand-lightBlue
+		font-size: 18px
+		margin-left: auto
+		margin-right: auto
+		margin: 15px 0
+		padding: 10px 15px
+		text-transform: uppercase
+		width: 120px
+		&:hover
+			background: $brand-lightBlue
+			color: #FFF
+
+div.founders
+	margin-top: 20px
+	h4
+		color: #79a3b8
+		font-weight: 600
+#content .principles ul
+	margin: 20px 0
+	li
+		color: #555
+		font-weight: 700
+		margin: 10px 0
+		padding: 0
+		&:before
+			content: " "
+span.underline
+	text-decoration: underline
+span.author
+	margin-left: 5px
+	font-size: 85%
+// Main Banner w/ Arrow
+.banner-home
+	background: $brand-lightBlue
+	color: #FFF
+	padding-bottom: 20px
+	padding-top: 20px
+	text-align: center
+	h2
+		margin: 0
+.banner
+	background: $brand-lightBlue
+	border-top: 5px solid #FFF
+	color: #FFF
+	h4
+		float: left
+		font-size: 26px
+		font-weight: 200
+	a#connect
+		color: #FFF
+		&:hover
+			text-decoration: none
+	#connect
+		float: right
+		h3
+			font-size: 20px
+			font-weight: 100
+			margin-top: 10px
+		i.fa.fa-linkedin
+			background: white
+			color: $brand-lightBlue
+			padding: 2px 4px
+#content > .row > .col-sm-12 > img:first-child
+	margin-right: 15px
+/* 
+ * Media Queries
+ */
+@media only screen and (max-width: 768px)
+	#home-feat
+		padding: 50px 15px
+	.module
+		#grid
+			padding: 15px 0
+			h4
+				font-weight: 500
+				margin: 0
+			p
+				margin-top: 10px
+		.square
+			border-bottom: 1px solid $brand-lightBlue
+			margin-bottom: 15px
+		a
+			color: #FFF
+@media only screen and (min-width: 769px)
+	.module
+		#grid
+			padding: 15px 0
+			h4
+				font-weight: 500
+				margin: 0
+			p
+				margin-top: 10px
+		.square
+			border: 2px solid $brand-lightBlue
+			margin: 10px
+			padding: 10px
+			width: 100%
+			transition-duration: 0.25s
+			&:hover
+				background-color: #FFF
+				border-color: #FFF
+		a
+			color: #FFF
+			&:hover
+				color: $brand-blue
+				text-decoration: none
+				h4
+					color: $brand-blue
+	.icons
+		.col-sm-4:first-child
+			border-right: 1px solid darken($brand-lightGray, 10%)
+		.col-sm-5.col-sm-offset-1
+			border-right: 1px solid darken($brand-lightGray, 10%)
+		.col-sm-5:last-child
+			padding-left: 20px
+		.col-sm-4:nth-child(3)
+			border-left: 1px solid darken($brand-lightGray, 10%)
+	#caseStudies .col-sm-3
+		&:nth-child(2)
+			img
+				margin-top: -40px
+		&:nth-child(4)
+			img
+				margin-top: -30px
+	.square
+		height: 140px
+		img
+			margin-top: -25px
+			position: relative
+			top: 50%
+	#home-feat
+		height: 480px
+		position: relative
+		.content
+			bottom: 60px
+			left: 50px
+			position: absolute
+	#content
+		dl.grid
+			dt
+				color: #555
+				vertical-align: middle
+				width: 30%
+			dd
+				border-left: 5px solid #FFF
+				width: 70%
+	#connect
+		margin-right: -15px
+	.banner
+		&:after, &:before
+			border: solid transparent
+			content: ""
+			height: 0
+			left: 40%
+			pointer-events: none
+			position: absolute
+			top: 100%
+			width: 0
+			z-index: 4
+		&:after
+			border-color: rgba($brand-lightBlue, 0)
+			margin-left: -15px
+			border-top-color: $brand-lightBlue
+			border-width: 15px
+		&:before
+			border-color: rgba($brand-lightBlue, 0)
+			border-top-color: $brand-lightBlue
+			border-width: 15px
+			margin-left: -15px
+// Contact
+form
+	ul.errors
+		background: lighten($brand-red, 10%)
+		border-radius: 4px
+		color: white
+		margin-bottom: 30px
+		padding: 30px 40px !important
+// Case Study
+section.case-study
+	line-height: 2.5em
+	p
+		margin-bottom: 30px
+	h5
+		font-weight: 700
+		font-style: italic
+// Sidebar Table
+@media only screen and (min-width: 769px)
+	#sidebar
+		&:after
+			position: absolute
+			top: 100%
+			left: 0
+			right: 0
+			content: ""
+			width: auto
+			height: 0
+			border-style: solid
+			border-width: 50px 125px 0 125px
+			border-color: #f7f7f7 transparent transparent transparent
+@media only screen and (min-width: 992px)
+	#sidebar
+		&:after
+			border-width: 50px 165px 0 165px
+		border-color: #f7f7f7 transparent transparent transparent
+@media only screen and (min-width: 1170px)
+	#sidebar
+		&:after
+			border-width: 50px 195px 0 195px
+		border-color: #f7f7f7 transparent transparent transparent
+@media only screen and (min-width: 1200px)
+	#sidebar
+		padding: 50px 50px 80px 65px
+	#content
+		padding: 50px 50px 80px
+	#subscribe
+		padding: 15px 35px 15px

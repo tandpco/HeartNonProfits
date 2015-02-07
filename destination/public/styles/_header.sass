@@ -1,0 +1,73 @@
+.header
+	background: $brand-blue
+	color: #FFF
+	// padding: 15px 50px
+	position: relative
+	a
+		color: white
+		text-decoration: none
+	ul
+		padding: 0
+		li
+			display: inline-block
+			font-size: 14px
+	.nav
+		a
+			color: #FFF
+			margin: 0 10px
+			padding: 0
+			&:hover, &:active
+				background: transparent
+				border-bottom: 3px solid $brand-lightBlue
+				color: darken(#FFF, 10%)
+@media only screen and (max-width: 480px)
+	.header > a > img
+		width: 50%
+	.header i.fa.fa-bars.menu
+		left: 30px
+@media only screen and (min-width: 1200px)
+	.header
+		small
+			position: absolute
+			right: 50px
+			a
+				color: #FFF
+				&:hover, &:active
+					color: darken(#FFF, 10%)
+					text-decoration: none
+		.nav
+			position: absolute
+			right: 40px
+			top: 70px
+	.banner
+		padding: 15px 35px
+@media only screen and (min-width: 1201px)
+	.header
+		padding: 35px 50px
+	.menu#show
+		display: none
+@media only screen and (max-width: 1200px)
+	.menu#show
+		display: inline-block
+		position: absolute
+		bottom: 15px
+		right: 30px
+		font-size: 24px
+	.header
+		padding: 15px 10px
+	.banner
+		margin-left: -10px
+	ul.nav
+		background: $brand-blue
+		display: none
+		left: 0
+		right: 0
+		padding: 10px 15px
+		position: absolute
+		top: 92px
+		z-index: 5
+		li
+			display: block
+			clear: both
+			float: none
+			margin: 15px 0
