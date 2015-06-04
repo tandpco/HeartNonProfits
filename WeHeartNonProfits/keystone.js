@@ -9,8 +9,8 @@ var keystone = require('keystone');
 
 keystone.init({
 
-	'name': 'We Heart Non-Profits',
-	'brand': 'We Heart Non-Profits',
+	'name': 'We Heart Non Profits',
+	'brand': 'We Heart Non Profits',
 
 	'less': 'public',
 	'static': 'public',
