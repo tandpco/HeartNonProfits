@@ -1,0 +1,28 @@
+extends ../layouts/default
+
+block content
+	.container.create.view
+		.jumbotron.create
+			span(contentEditable='false')
+				| I
+				+heart
+				|  Working for a NonProfit Because
+			span#message= data.message.content
+			.author= data.message.author
+		.form-area
+			a(class='btn btn-pink') FACEBOOK
+			a(class='btn btn-pink') TWITTER
+			.input-area
+				span URL
+				div http://www.welovenonprofits.org/note/#{data.message._id}
+		.jumbotron.about: .row
+			.col-sm-12.col-md-6
+				h4 ABOUT
+				p We love nonprofits. Before starting a software company to serve them we worked as employees at organizations working to make a positive impact in the world. Every industry has it’s pluses and minuses. This industry has a ton of pros that often get overshaddowed by the more obvious cons. 
+				p People are constantly talking about how awesome it is to work at high-tech companies like Google and Facebook or all the perks that come with being an elite banker or the steady paycheck working for a mega corporation. Well...we think it’s time to cast a spotlight on all the AWESOME reasons to work for a nonprofit. Seriously, how cool is it to be paid to make a difference in the world! Let’s celebrate that!
+			.col-sm-12.col-md-6
+				h4 WHAT IS RAINMAKER
+				p While working for nonprofit and campaigns across the country we discovered that the best professionals working on solving the most pressing problems are forced to use the worst tools! Honestly, that made us pretty mad.
+				p How could it be that a 2.2 trillion dollar industry that accounts for 10% of the USA workforce be relegated to using technology from the stone age?!?!?
+				p With tears in our eyes and hope in our hearts we left our roles as nonprofit employees and founded a software company to help all our friends (including you) raise more money and delight supporters with software that actually makes your life easier. Imagine a world where your organization doesn’t has plenty of funds to execute and expand your programs, where your donors are as crazy about you as they are about their new iPhone, We’re working on making that possible!
+				p To learn more check us out here: <a href="http://www.rainmakerapp.com" target="_blank">www.rainmakerapp.com</a>

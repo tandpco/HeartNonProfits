@@ -1,0 +1,682 @@
+// Bootstrap
+// =========
+
+// You can include less bootstrap components if you like by
+// importing the .less files you want directly, instead of
+// the main bootstrap/bootstrap.less file.
+//
+// Bootstrap can be removed entirely by deleting this line.
+
+@import "bootstrap/bootstrap.less";
+
+// The easiest way to customise Bootstrap variables while
+// being able to easily override the source files with new
+// versions is to override the ones you want in another file.
+//
+// You can also add your own custom variables to this file for
+// use in your site stylesheets.
+
+@import "site/variables.less";
+
+
+// Site Styles
+// ===========
+
+// Add your own site style includes here
+@import "site/layout.less";
+
+@primary: 'Proxima Nova', 'proxima-nova', sans-serif;
+@serif: 'Museo Slab', 'museo-slab', sans-serif;
+
+@green: #65BE80;
+@pink: #EE7474;
+@red: #941010;
+@blue: #387B99;
+
+body {
+  font-family: @primary;
+}
+
+.nav {
+  line-height: 72px;
+  &:not(.home) {
+    box-shadow: 0 0 6px fade(black, 25%);
+  }
+}
+
+.btn {
+  border-radius: 2px;
+  transition: all 300ms ease;
+  &.btn-success {
+    background: @green;
+    border: 1px solid @green;
+    &:hover {
+      background: darken(@green, 10%);
+      border: 1px solid darken(@green, 10%);
+    }
+  }
+  &.btn-default {
+    background: none;
+    color: #FFF;
+    border: 1px solid #FFF;
+    &:hover {
+      background: rgba(255, 255, 255, 0.25);
+      border: 1px solid transparent;
+    }
+  }
+}
+
+.main-jumbotron {
+  background-image: url(../images/main-background.png);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #FFF;
+  padding-bottom: 80px;
+  padding-top: 80px;
+  h1 {
+    font-size: 44px;
+    font-family: @serif;
+    font-weight: 100;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: 24px;
+    font-weight: 100;
+    margin: 25px 0;
+    strong {
+      font-weight: 600;
+    }
+  }
+  .btn {
+    font-size: 14px;
+    line-height: 36px;
+    letter-spacing: 0.075em;
+    margin: 0 10px;
+    padding: 0 30px;
+  }
+}
+
+.jumbotron.about {
+  padding-bottom: 45px;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-top: 45px;
+  h4 {
+    color: @pink;
+    font-family: @serif;
+    font-size: 24px; 
+    margin-top: 0;
+  }
+  p {
+    font-size: 14px;
+    font-family: @primary;
+    line-height: 18px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+#message-grid[data-columns] {
+  &:before {
+    content: '3 .col-xs-12.col-sm-6.col-md-4';
+  }
+  .message {
+    background-color: @pink;
+    border-radius: 3px;
+    color: #FFF;
+    font-family: @primary;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 36px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    padding: 30px;
+    position: relative;
+    text-transform: uppercase;
+    &:hover {
+      .overlay {
+        opacity: 1;
+      }
+    }
+    .author {
+      color: @red;
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 600;
+      line-height: 18px;
+      margin-top: 15px;
+      text-transform: initial;
+    }
+    .overlay {
+      background-color: @blue;
+      bottom: 0;
+      color: #FFF;
+      left: 0;
+      opacity: 0;
+      // opacity: 1;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: all 200ms ease;
+      .overlay-content {
+        bottom: 0;
+        display: table;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0;
+        width: 100%;
+        .share {
+          margin-top: 15px;
+          .btn-default {
+            background-color: darken(@blue, 15%);
+            border: 0;
+            font-size: 14px;
+            font-family: @primary;
+            height: 42px;
+            line-height: 42px;
+            margin: 0 10px;
+            padding: 0 20px;
+            text-align: center;
+            text-decoration: none;
+            // width: 42px;
+            &:hover {
+              background-color: fade(#FFF, 50%);
+              color: @blue;
+            }
+            i {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+      a {
+        color: inherit;
+        font-family: @serif;
+        font-size: 24px;
+        font-weight: 300;
+        letter-spacing: 0.075em;
+        text-align: center;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Create Page
+.create {
+  .text-center.intro {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    h2 {
+      color: @pink;
+      font-family: @serif;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    p {
+      color: #4C4C4C;
+      font-size: 16px;
+      line-height: 18px;
+      margin-bottom: 0;
+    }
+  }
+  .jumbotron.create {
+    background-color: @pink;
+    color: #FFF;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 70px;
+    outline: 0;
+    padding: 45px;
+    text-transform: uppercase;
+    svg {
+      height: 64px !important;
+      width: 64px !important;
+    }
+  }
+  .form-area {
+    margin-bottom: 45px;
+  }
+  label {
+    color: @pink;
+    display: block;
+    font-family: @serif;
+    font-weight: 300;
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  input {
+    border: 1px solid #424242;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: 0;
+    line-height: 36px;
+    padding: 0 15px;
+    transition: all 300ms ease;
+    width: 100%;
+    &:focus {
+      border: 1px solid @pink;
+    }
+  }
+  button {
+    appearance: none;
+    background: @pink;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: 36px;
+    padding: 0 20px;
+    transition: all 300ms ease;
+    &:hover {
+      background: darken(@pink, 5%);
+    }
+  }
+  &.view {
+    padding-top: 45px;
+    .jumbotron {
+      .author {
+        color: @red;
+        font-size: 36px;
+        font-style: italic;
+        text-transform: initial;
+        line-height: 36px;
+        margin-top: 10px;
+      }
+    }
+    .btn-pink {
+      background-color: @pink;
+      border-radius: 2px;
+      border: 1px solid @pink;
+      color: white;
+      line-height: 24px;
+      text-transform: uppercase;
+      @media (min-width: 768px) {
+        margin-right: 10px;
+      }
+    }
+    .input-area {
+      display: inline-block;
+      position: relative;
+      span {
+        bottom: 0;
+        color: @pink;
+        font-style: 16px;
+        font-weight: 600;
+        left: 15px;
+        line-height: 38px;
+        position: absolute;
+        top: 0;
+      }
+      div {
+        border: 1px solid #424242;
+        border-radius: 2px;
+        cursor: pointer;
+        line-height: 36px;
+        padding-left: 50px;
+        padding-right: 15px;
+        transition: all 300ms ease;
+        vertical-align: middle;
+        &:hover {
+          border: 1px solid @pink;
+        }
+      }
+    }
+  }
+}
+
+// .messages {
+//   max-width: 1160px;
+//   margin: 0px auto;
+//   color: #fff;
+//   font-weight: 600; }
+// .message-content {
+//   background-color: #ee7474;
+//   margin: 10px 10px;
+//   border-radius: 4px;
+//   padding: 39px;
+//   font-size: 30px;
+//   line-height: 40px;
+//   text-transform: uppercase;
+//   display: inline-block;
+// }
+// .message-content:hover {
+//   cursor: pointer;
+// }
+
+.share-btn {
+  margin:5px;
+}
+
+.share-link {
+  display: inline-block;
+  margin-top:10px;
+  font-weight:bold;
+  font-size:30px;
+}
+
+
+/**/
+
+/**/
+
+
+.signature {
+  color: #8f2424;
+  text-transform: capitalize;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Proxima Nova", sans-serif;
+}
+
+.post p {
+  margin: 0;
+  padding: 0 10px;
+  font-size: 24px }
+.post .describe {
+  font-family: "Proxima Nova", sans-serif;
+  font-weight: lighter;
+  font-size: 16px;
+}
+.post .pink-text {
+  color: #ee7474;
+  font-size: 25px;
+  margin-top: 50px;
+  margin-bottom: 10px; }
+.post .post-text {
+  margin: 41px auto;
+  background-color: #ee7474;
+  font-size: 78px;
+  color: #fff;
+  text-transform: uppercase;
+  max-width: 1159px;
+  padding: 24px 39px;
+  font-weight: bold;
+  font-family: "Proxima Nova", sans-serif;
+  border-radius: 4px;
+  line-height: 90px; }
+  .post .post-text textarea {
+    width: 100%;
+    border-color: transparent;
+    background-color: #ee7474;
+    text-transform: uppercase;
+    outline: none;
+    resize: none;
+    border-radius: 5px;
+    cursor: auto;
+    line-height: 87px; }
+  .post-heart {
+    background-image: url(../images/post-heart@2x.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px;
+    margin: 0 20px;
+  }
+  .text-count {
+    position: relative;
+    left: 1020px;
+    font-family: "Proxima Nova", sans-serif;
+    font-size: 40px;
+    color: #000;
+    opacity: 0.3;
+  }
+  .text-count label {
+    display: none;
+  }
+
+  @media (max-width: 820px) {
+    .post .post-text {
+      font-size: 36px;
+      margin: 0 5px;
+      line-height: 46px
+    }
+    .post .post-text textarea {
+      line-height: 43px;
+    }
+    .text-count {
+      display: none;
+    }
+    .post-heart {
+      padding: 30px;
+    }
+  }
+  @media (max-width: 465px) {
+    .post .post-text {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    .post .post-text textarea {
+      line-height: 33px;
+    }
+    .post-heart {
+      padding: 20px;
+      margin: 0 10px;
+    }
+    .text-count {
+      display: none;
+    }
+  }
+
+.post .post-sign {
+  margin: 45px auto; }
+  @media (min-width: 770px) {
+    .post .post-sign label {
+      color: #ee7474;
+      text-transform: uppercase;
+      display: block;
+      font-family: "Museo-Slab", sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      font-style: italic; }
+    .post .post-sign input {
+      border-radius: 4px;
+      border-color: transparent;
+      outline: none;
+      padding: 9.6px;
+      font-family: "Proxima Nova", sans-serif;
+      font-style: italic;
+      font-size: 18px; }
+    .post .post-sign .email {
+      margin: 0 30px;
+    }
+    .post .post-sign button {
+      background-color: #ee7474;
+      border-color: transparent;
+      padding: 8px 70px 8px 20px;
+      color: #fff;
+      border-radius: 4px;
+      margin-left: 10px;
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase; }
+      .post .post-sign button:hover {
+        color: #ee7474;
+        background-color: #fff; } }
+  @media (max-width: 769px) {
+    .post .post-sign label {
+      color: #ee7474;
+      text-transform: uppercase;
+      display: block;
+      font-family: "Museo-Slab", sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      font-style: italic; }
+    .post .post-sign input {
+      border-radius: 4px;
+      border-color: transparent;
+      outline: none;
+      padding: 14px;
+      display: block;
+      width: 100%;
+      margin: 10px auto;
+      font-family: "Proxima Nova", sans-serif;
+      font-style: italic;
+      font-size: 18px; }
+    .post .post-sign button {
+      margin-left: 0;
+      background-color: #ee7474;
+      border-color: transparent;
+      padding: 5px 15px;
+      color: #fff;
+      border-radius: 4px;
+      font-family: "Proxima Nova", sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase; } }
+  .post .post-sign .col-sm-3 {
+    border: 1px solid #000; }
+
+.banner { position: relative; overflow: auto; width: 100%;}
+    .banner li { list-style: none; }
+        .banner ul li { float: left; }
+
+.banner ul {
+  padding: 0;
+}
+
+.banner .slide {
+  height: auto;
+}
+
+
+.view {
+  position: relative;
+}
+
+.wrapper {
+  margin-top: 30px;
+}
+
+.view-post {
+  background-color: #ee7474;
+  font-size: 78px;
+  color: #fff;
+  text-transform: uppercase;
+  height: 531px;
+  width: 100%;
+  font-weight: bold;
+  font-family: "Proxima Nova", sans-serif;
+  border-radius: 4px;
+}
+
+.view-post .content {
+  background-color: #ee7474;
+  padding: 24px 39px;
+}
+
+.view-post .user-name {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 40px;
+  font-style: italic;
+  text-transform: capitalize;
+  color: #8f2424;
+  display: block;
+  line-height: 35px;
+}
+
+.prev {
+  border-bottom: 9px solid;
+  border-left: 9px solid;
+  transform: rotate(45deg);
+  top: 50%;
+  margin-top: -31px;
+  left: -50px;
+}
+.next {
+  border-bottom: 9px solid;
+  border-left: 9px solid;
+  transform: rotate(-135deg);
+  top: 50%;
+  margin-top: -31px;
+  right: -50px;
+}
+
+.arrows {
+  border-color: #ee7474;
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+@media (max-width: 820px) {
+  .view-post {
+    font-size: 36px;
+  }
+  .post-heart {
+    padding: 30px;
+  }
+  .arrows {
+    display: none;
+  }
+}
+@media (max-width: 465px) {
+  .view-post {
+    font-size: 28px;
+  }
+  .post-heart {
+    padding: 20px;
+    margin: 0 10px;
+  }
+  .arrows {
+    display: none;
+  }
+}
+
+.view .social {
+  margin-top: 25px;
+  margin-bottom: 60px;
+  padding-left: 0;
+  font-size: 14px;
+  font-family: "Proxima Nova", sans-serif; }
+.view .social a {
+  background-color: #ee7474;
+  border-color: transparent;
+  padding: 10px 22px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin-right: 13px;
+  font-weight: bold;
+  font-family: "Proxima Nova", sans-serif;
+  cursor: pointer; }
+.view .social a:hover {
+  color: #ee7474;
+  background-color: #fff;
+  text-decoration: none; }
+.view .social .social-link {
+  display: inline;
+  border: 1px solid #5a5a5a;
+  padding: 9.5px 20px;
+  border-radius: 5px;
+  font-weight: 200;
+  font-family: "Proxima Nova", sans-serif;}
+.view .social span {
+  color: #ee7474;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-right: 10px;
+  font-family: "Proxima Nova", sans-serif;
+}
+@media (max-width: 530px) {
+  .view .social .social-link {
+    padding: 9.5px 10px;
+    margin-top: 20px;
+    display: flex;}
+  .view .social span {
+    color: #ee7474;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 12px;
+    margin-right: 10px; } }
